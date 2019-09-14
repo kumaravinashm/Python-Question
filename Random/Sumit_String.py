@@ -11,5 +11,5 @@ def sumit(a):
         return "NO"
 
 
-s = "zazabcdefghgfgfededededcdefghghijkjihihgfe"
+s = "abcdefghgfgfededededcdefghghijkjihihgfe"
 print(sumit(s))
