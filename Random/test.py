@@ -1,18 +1,27 @@
-def cinema(sam,friends):
-    s = sam[1]
-    n = sam[0]
-    i, j = 0, n
-    a = sorted(friends)
-    while i + 1 < j and a[i] <= s <= a[j - 1]:
-        i += 1
-        j -= 1
-    print(j-i)
+import re
+regex = '\S+@\S+.\S+'
+
+def check(email):
+    # pass the regualar expression
+    # and the string in search() method
+    if (re.search(regex, email)):
+        print("Valid Email")
+
+    else:
+        print("Invalid Email")
+
+    # Driver Code
 
 
+if __name__ == '__main__':
+    # Enter the email
+    email = "ankitrai326@gmail.com"
 
+    # calling run function
+    check(email)
 
+    email = "my.ownsite@ourearth.org"
+    check(email)
 
-
-sam = [1, 5]
-friends = [4]
-cinema(sam,friends)
+    email = "ankitrai326@.com"
+    check(email)
